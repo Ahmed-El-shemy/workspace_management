@@ -1,7 +1,8 @@
 fastapi==0.109.0
 uvicorn[standard]==0.27.0
-motor==3.6.0
-pydantic>=2.0.0
+motor>=3.0.0
+pymongo>=4.9.0  # Provides bson
+pydantic[email]>=2.0.0
 pydantic-settings==2.1.0
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4

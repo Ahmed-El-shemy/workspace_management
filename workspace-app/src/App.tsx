@@ -8,6 +8,9 @@ import CalendarPage from './pages/CalendarPage';
 import TeamPage from './pages/TeamPage';
 import ReportsPage from './pages/ReportsPage';
 import SettingsPage from './pages/SettingsPage';
+import TaskMasterDashboard from './pages/TaskMasterDashboard';
+import SubAdminPortal from './pages/SubAdminPortal';
+import TaskFlowDetail from './pages/TaskFlowDetail';
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
         <Route path="/team" element={<TeamPage />} />
         <Route path="/reports" element={<ReportsPage />} />
         <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/taskmaster" element={<TaskMasterDashboard />} />
+        <Route path="/subadmin" element={<SubAdminPortal />} />
+        <Route path="/taskflow" element={<TaskFlowDetail />} />
       </Routes>
     </BrowserRouter>
   );

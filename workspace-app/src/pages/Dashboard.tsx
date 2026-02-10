@@ -116,9 +116,9 @@ const Dashboard = () => {
                     {/* Stats Grid */}
                     <div className="grid grid-cols-4 gap-5 mb-8">
                         {stats.map((stat, index) => (
-                            <div key={index} className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 transition-colors">
-                                <div className="text-xs font-medium text-text-gray dark:text-gray-400 mb-2">{stat.title}</div>
-                                <div className="text-3xl font-bold text-text-dark dark:text-white mb-1">{stat.value}</div>
+                            <div key={index} className="bg-white rounded-xl border border-gray-200 p-6 transition-colors">
+                                <div className="text-xs font-medium text-text-gray mb-2">{stat.title}</div>
+                                <div className="text-3xl font-bold text-text-dark mb-1">{stat.value}</div>
                                 <div className={`text-xs font-medium ${stat.isPositive ? 'text-success' : 'text-danger'}`}>
                                     {stat.change}
                                 </div>
@@ -136,9 +136,9 @@ const Dashboard = () => {
                     {/* Content Grid */}
                     <div className="grid grid-cols-2 gap-6">
                         {/* Recent Activity */}
-                        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 transition-colors">
+                        <div className="bg-white rounded-xl border border-gray-200 p-6 transition-colors">
                             <div className="flex items-center justify-between mb-5">
-                                <h2 className="text-lg font-bold text-text-dark dark:text-white">Recent Activity</h2>
+                                <h2 className="text-lg font-bold text-text-dark">Recent Activity</h2>
                                 <a href="#" className="text-sm text-primary font-medium hover:underline">
                                     View all
                                 </a>
@@ -152,13 +152,13 @@ const Dashboard = () => {
                                         </div>
                                         <div className="flex-1 min-w-0">
                                             <div className="text-sm">
-                                                <span className="font-semibold text-text-dark dark:text-gray-200">{activity.user.name}</span>
-                                                {' '}<span className="text-text-gray dark:text-gray-400">{activity.action}</span>
+                                                <span className="font-semibold text-text-dark">{activity.user.name}</span>
+                                                {' '}<span className="text-text-gray">{activity.action}</span>
                                                 {' '}<span className="text-primary font-medium">{activity.target}</span>
                                             </div>
                                             <div className="flex items-center gap-2 mt-1">
                                                 <div className={`w-2 h-2 rounded-full ${getActivityIcon(activity.type)}`}></div>
-                                                <span className="text-xs text-text-gray dark:text-gray-500">{activity.timestamp}</span>
+                                                <span className="text-xs text-text-gray">{activity.timestamp}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -167,17 +167,17 @@ const Dashboard = () => {
                         </div>
 
                         {/* My Tasks */}
-                        <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 p-6 transition-colors">
+                        <div className="bg-white rounded-xl border border-gray-200 p-6 transition-colors">
                             <div className="flex items-center justify-between mb-5">
-                                <h2 className="text-lg font-bold text-text-dark dark:text-white">My Tasks</h2>
+                                <h2 className="text-lg font-bold text-text-dark">My Tasks</h2>
                                 <div className="flex items-center gap-2">
-                                    <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">
-                                        <svg className="w-4 h-4 text-text-gray dark:text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                                    <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-lg transition-colors">
+                                        <svg className="w-4 h-4 text-text-gray" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                                             <path d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
                                         </svg>
                                     </button>
-                                    <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors">
-                                        <svg className="w-4 h-4 text-text-gray dark:text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                                    <button className="w-8 h-8 flex items-center justify-center hover:bg-gray-100 rounded-lg transition-colors">
+                                        <svg className="w-4 h-4 text-text-gray" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                                             <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                                         </svg>
                                     </button>
@@ -185,7 +185,7 @@ const Dashboard = () => {
                             </div>
 
                             {/* Table Header */}
-                            <div className="grid grid-cols-12 gap-4 px-3 pb-3 border-b border-gray-200 dark:border-gray-700 text-xs font-medium text-text-gray dark:text-gray-400 uppercase">
+                            <div className="grid grid-cols-12 gap-4 px-3 pb-3 border-b border-gray-200 text-xs font-medium text-text-gray uppercase">
                                 <div className="col-span-5">Task Name</div>
                                 <div className="col-span-3">Status</div>
                                 <div className="col-span-2">Priority</div>
@@ -195,10 +195,10 @@ const Dashboard = () => {
                             {/* Task Rows */}
                             <div className="space-y-0">
                                 {tasks.map((task) => (
-                                    <div key={task.id} className="grid grid-cols-12 gap-4 px-3 py-4 hover:bg-gray-50 dark:hover:bg-gray-700/50 rounded-lg transition-colors">
+                                    <div key={task.id} className="grid grid-cols-12 gap-4 px-3 py-4 hover:bg-gray-50 rounded-lg transition-colors">
                                         <div className="col-span-5">
-                                            <div className="text-sm font-medium text-text-dark dark:text-gray-200">{task.name}</div>
-                                            <div className="text-xs text-text-gray dark:text-gray-400 mt-0.5">{task.category}</div>
+                                            <div className="text-sm font-medium text-text-dark">{task.name}</div>
+                                            <div className="text-xs text-text-gray mt-0.5">{task.category}</div>
                                         </div>
                                         <div className="col-span-3 flex items-center">
                                             <span className={`px-2.5 py-1 rounded-md text-xs font-medium ${getStatusBadgeColor(task.status)}`}>
@@ -211,7 +211,7 @@ const Dashboard = () => {
                                             </span>
                                         </div>
                                         <div className="col-span-2 flex items-center">
-                                            <span className="text-sm text-text-dark dark:text-gray-300">{task.dueDate}</span>
+                                            <span className="text-sm text-text-dark">{task.dueDate}</span>
                                         </div>
                                     </div>
                                 ))}

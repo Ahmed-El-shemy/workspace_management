@@ -11,6 +11,10 @@ const Sidebar = () => {
         { icon: '👥', label: 'Team', path: '/team' },
         { icon: '📈', label: 'Reports', path: '/reports' },
         { icon: '⚙️', label: 'Settings', path: '/settings' },
+        // New Pages
+        { icon: '🚀', label: 'TaskMaster', path: '/taskmaster' },
+        { icon: '🔐', label: 'Sub-Admin', path: '/subadmin' },
+        { icon: '🌊', label: 'TaskFlow', path: '/taskflow' },
     ];
 
     return (
